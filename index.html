@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- *********************** Navbar *********************** -->
+  <header>
+    <nav>
+      <figure class="logo">
+        <img src="./img/figma-logo.svg" alt="">
+      </figure>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><button class="btn-connexion">Connexion</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- *********************** Main *********************** -->
+  <main id="main">
+    <div class="main-content">
+      <figure class="main-logo">
+        <img src="./img/figma-logo.svg" alt="">
+      </figure>
+      <h1>apprendre figma</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque molestias nulla et nobis repellendus asperiores
+        quas saepe quod vero suscipit! Lor
+      </p>
+      <hr>
+    </div>
+
+    <!-- *********************** Connexion *********************** -->
+    <form id="connexion">
+      <div class="connexion-content">
+        <h1>connexion</h1>
+        <div class="user-infos">
+          <h2>email</h2>
+          <input type="email" placeholder="entrez votre email">
+          <h2>mot de passe</h2>
+          <input type="password" placeholder="entrez votre mot de passe">
+          <input type="submit" class="btn-connexion" value="Connexion">
+        </div>
+        <p>Mot de passe oublie ?</p>
+        <p class="sing-up">Pas encore de compte ? <a href="#">s'inscrire</a></p>
+      </div>
+    </form>
+  </main>
+
+  <!-- *********************** Gradient *********************** -->
+  <div id="gradient">
+
+    <a class="arrow" href="#courses"><i class="fa-solid fa-arrow-down"></i></a>
+
+  </div>
+
+  <!-- *********************** Courses *********************** -->
+  <section id="courses">
+    <div class="course active">
+      <h2>figma : les bases</h2>
+      <hr>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates eos id natus quis cupiditate alias
+        similique praesentium suscipit, animi pariatur earum blanditiis tempora ipsum eius illo molestias consectetur
+        possimus eligendi.
+      </p>
+    </div>
+    <div class="course">
+      <h2>figma : avance</h2>
+      <hr>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates eos id natus quis cupiditate alias
+        similique praesentium suscipit, animi pariatur earum blanditiis tempora ipsum eius illo molestias consectetur
+        possimus eligendi.
+      </p>
+    </div>
+    <div class="course">
+      <h2>figma : expert</h2>
+      <hr>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates eos id natus quis cupiditate alias
+        similique praesentium suscipit, animi pariatur earum blanditiis tempora ipsum eius illo molestias consectetur
+        possimus eligendi.
+      </p>
+    </div>
+    <div class="course">
+      <h2>figma : master</h2>
+      <hr>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates eos id natus quis cupiditate alias
+        similique praesentium suscipit, animi pariatur earum blanditiis tempora ipsum eius illo molestias consectetur
+        possimus eligendi.
+      </p>
+    </div>
+  </section>
+
+  <script>
+
+    const btn = document.querySelector(".btn-connexion");
+    const courses = document.querySelectorAll(".course");
+
+    btn.addEventListener('click', () => {
+      connexion.classList.toggle("connect");
+    });
+
+    courses.forEach(course => {
+      course.addEventListener('click', () => {
+        console.log(course);
+        course.classList.toggle("active")
+      })
+    });
+
+  </script>
+</body>
+
+</html>
