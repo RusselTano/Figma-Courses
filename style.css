@@ -275,6 +275,7 @@ hr {
   backdrop-filter: blur(7px);
   width: 300px;
   border-left: 2px solid var(--primary-color);
+  z-index: 3;
 }
 
 #connexion.connect {
@@ -314,7 +315,7 @@ hr {
   row-gap: 30px;
 }
 
-input {
+.connexion-content input {
   outline: none;
   border: 0;
   border-bottom: 1px solid var(--white);
@@ -324,8 +325,23 @@ input {
   margin-top: -15px;
 }
 
-::placeholder {
+#connexion ::placeholder {
   color: var(--white);
+}
+
+.btn-connexion,
+input[type=submit].btn-connexion {
+  background-color: var(--primary-color);
+  padding: 10px 15px;
+  border-radius: 999px;
+  color: var(--secondary-color);
+  font-weight: var(--fw-title);
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-connexion:hover {
+  background-color: var(--primary-color-soft);
 }
 
 .sing-up {
@@ -336,4 +352,15 @@ input {
 input[type=submit] {
   outline: 0;
   border: 0;
+}
+
+input[type=submit]:hover {
+  background-color: var(--primary-color-soft);
+}
+
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  display: none;
 }

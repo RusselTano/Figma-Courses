@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+  <div class="layer"></div>
   <!-- *********************** Navbar *********************** -->
   <header>
     <nav>
@@ -109,8 +109,15 @@
 
     const btn = document.querySelector(".btn-connexion");
     const courses = document.querySelectorAll(".course");
+    const layer = document.querySelector(".layer");
 
     btn.addEventListener('click', () => {
+      connexion.classList.toggle("connect");
+      layer.style.display = "block";
+    });
+
+    layer.addEventListener('click', () => {
+      layer.style.display = "none";
       connexion.classList.toggle("connect");
     });
 
